@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,900;1,900&display=swap');
+@import "tailwindcss";
+
+
+@theme{
+    --font-Berkshire-Swash: "Berkshire Swash", serif;
+    --font-Playfair-Display:"Playfair Display", serif;
+}
