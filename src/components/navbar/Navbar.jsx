@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/Logo.jpg'
 import { FiAlignJustify } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { AiOutlineSearch } from "react-icons/ai";
