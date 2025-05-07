@@ -88,7 +88,7 @@ const Cart = () => {
           };
          
           console.log("Sending Payment:", payment);
-      
+           debugger;
         
           const form = document.createElement('form');
           form.method = 'POST';
