@@ -20,7 +20,8 @@ const SecondMenu = () => {
  useEffect(() => {
     fetch(`${Url}/getallfood`)
       .then(response => response.json())
-      .then(data => setItem(data))
+      .then(data => {setItem(data)
+                    setLoading(false)})
       .catch(error => console.error("Error fetching foods:", error));
   }, []);
 
