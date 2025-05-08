@@ -53,7 +53,7 @@ const Navbar = ({ fn, nfn, nav }) => {
 
   return (
     <div className='flex flex-col gap-1'>
-      <div className="w-full h-[70px] flex justify-between items-center px-7 bg-amber-400">
+      <div className="w-full h-[70px] flex justify-between items-center px-2 md:px-7 bg-amber-400">
         {/* Logo Section */}
         <div className='flex gap-3 items-center'>
           <img src={logo} alt='Logo' className={nav ? 'mx-[-130px] h-10 ease-in-out duration-1000' : 'h-10 rounded-full border-2'} />
