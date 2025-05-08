@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Url from '../../assets/assets'
 
-const Customer = ({onSubmit}) => {
+const Customer = ({onSubmit,Load,setLoad}) => {
 
    const[form,setForm]=useState({
     fname:"",
@@ -33,6 +33,7 @@ const Customer = ({onSubmit}) => {
 
 
    const handleSubmit=(e)=>{
+    setLoad(false);
     e.preventDefault();
     const SearchEnyFieldEmpty=Object.values(form).some(value=>value===null ||value==='');
     if(SearchEnyFieldEmpty){
@@ -122,10 +123,12 @@ const Customer = ({onSubmit}) => {
       
         </div>
  
-
+        {!Load?  <div className="flex justify-center h-screen">
+                <div className="animate-spin   h-20 w-20 "><img src={Icon}/></div>
+              </div>
         <button type="submit" className='mt-6 w-full bg-yellow-400 text-black font-bold py-3 rounded hover:bg-yellow-500 transition-all'>
           Checkout
-        </button>
+        </button>}
         </form>
     </div>
   )
