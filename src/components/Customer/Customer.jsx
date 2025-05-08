@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Url from '../../assets/assets'
+import Icon from '../../assets/icon.png'
 
 const Customer = ({onSubmit,Load,setLoad}) => {
 
