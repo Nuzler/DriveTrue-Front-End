@@ -3,6 +3,7 @@ import Biriyani from '../../assets/food.png'
 import { useCart } from '../Cart/CartContext'
 import Url from '../../assets/assets'
 import { FaCirclePlus } from "react-icons/fa6";
+import Icon from '../../assets/icon.png'
 
 const Menu = () => {
   
