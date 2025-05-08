@@ -12,6 +12,7 @@ const Cart = () => {
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const[hash,setHash]=useState();
   const[pickuptime,setPickuptime]=useState('Now');
+  const [loading, setLoading] = useState(true);
 
 
    const sendData=async (customerData)=>{
@@ -156,7 +157,7 @@ const Cart = () => {
       </div>
 
          
-      {cart.length>0 && (<Customer onSubmit={sendData}/>) }
+       {cart.length>0 && (<Customer onSubmit={sendData} Load={loading} setLoad={setLoading}/>) }
       
       
     
