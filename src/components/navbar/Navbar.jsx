@@ -53,12 +53,12 @@ const Navbar = ({ fn, nfn, nav }) => {
 
   return (
     <div className='flex flex-col gap-1'>
-      <div className="w-full h-[70px] flex justify-between items-center px-2 md:px-7 bg-amber-400">
+      <div className="w-full h-[70px] flex justify-between items-center px-7 md:px-7 bg-amber-400">
         {/* Logo Section */}
         <div className='flex gap-3 items-center'>
           <img src={logo} alt='Logo' className={nav ? 'mx-[-130px] h-10 ease-in-out duration-1000' : 'h-10 rounded-full border-2'} />
           <div className='flex flex-col items-start'>
-            <h1 className="text-xl sm:text-2xl font-Berkshire-Swash tracking-wide">The Traveler’s Cafe</h1>
+            <h1 className="text-lg sm:text-2xl font-Berkshire-Swash tracking-wide">The Traveler’s Cafe</h1>
             <p className='text-sm px-1'>Drive True</p>
           </div>
         </div>
