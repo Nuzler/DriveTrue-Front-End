@@ -48,13 +48,13 @@ const SecondMenu = () => {
 
   return (
     <div className='flex my-17'>
-      <div className='bg-gradient-to-r from-red-900 to-orange-800 w-[20%] min-h-[1000px] flex flex-col      '>
+      <div className='bg-gradient-to-r from-red-900 to-orange-800 w-[20%] min-h-[1000px] flex flex-col'>
         {category.map((category)=>
            <div className='flex flex-col text-md text-amber-50 font-mono font-bold cursor-pointer my-4 px-1 hover:text-xl ease-in-out duration-200'> 
           <h1 key={category.id } onClick={()=>categoryClick(category.value)}>{category.name}</h1>
           </div>)}
       </div>
-       {loading?<div className="flex justify-center mx-[25%] md:mx-[50%] h-screen">
+       {loading?<div className="flex justify-center item-center mx-[25%] md:mx-[50%] h-screen">
               <div className="animate-spin   h-20 w-20 "><img src={Icon}/></div>
             </div>:
       <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 '>
