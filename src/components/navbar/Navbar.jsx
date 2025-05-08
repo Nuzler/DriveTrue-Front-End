@@ -58,7 +58,7 @@ const Navbar = ({ fn, nfn, nav }) => {
         <div className='flex gap-3 items-center'>
           <img src={logo} alt='Logo' className={nav ? 'mx-[-130px] h-10 ease-in-out duration-1000' : 'h-10 rounded-full border-2'} />
           <div className='flex flex-col items-start'>
-            <h1 className="text-sm sm:text-lg font-Berkshire-Swash tracking-wide">The Traveler’s Cafe</h1>
+            <h1 className="text-sm sm:text-lg font-Berkshire-Swash tracking-wide">The Traveler’s </h1>
             <p className='text-sm px-1'>Drive True</p>
           </div>
         </div>
