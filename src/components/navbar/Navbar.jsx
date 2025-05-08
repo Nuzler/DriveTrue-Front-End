@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/logo.jpg';
+import logo from '../../assets/Logo.jpg';
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { RiHome4Line } from "react-icons/ri";
