@@ -13,14 +13,16 @@ const Menu = () => {
     ]
     const[cartshow,SetCartshow]=useState();
     const[categoryopen,SetCategoryopen]=useState();
-
+    const [loading, setLoading] = useState(true);
     const [food, setFood] = useState([]); 
   
 
  useEffect(() => {
     fetch(`${Url}/getallfood`)
       .then(response => response.json())
-      .then(data => setFood(data))
+      .then(data => {setFood(data)
+                     setLoading(false)
+      })
       .catch(error => console.error("Error fetching foods:", error));
   }, []);
 
@@ -61,7 +63,9 @@ const Menu = () => {
   return (
     <div className='flex flex-col bg-amber-400    '>
       <h1 className='text-center text-8xl xl:text-9xl   font-Berkshire-Swash  my-3 text-gray-900 '>Popular Food</h1>
-     
+      {loading?  <div className="flex justify-center h-screen">
+      <div className="animate-spin   h-20 w-20 "><img src={Icon}/></div>
+      </div>:
       <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 lg:mx-11 lg:gap-3 xl:grid-cols-4 xl:gap-3 xl:mx-25  '>
       {food.map((food)=><div className="relative  flex flex-col my-6 bg-white shadow-sm  rounded-4xl  h-[400px]  hover:bg-amber-500 hover:border-3 hover:border-amber-500 ">
             <div key={food.foodId}  className='relative p-2.5 h-60 overflow-hidden rounded-xl bg-clip-border'>
@@ -83,7 +87,7 @@ const Menu = () => {
            </button>
             </div>
             </div>)}
-      </div>
+      </div>}
     </div>
   )
 }
