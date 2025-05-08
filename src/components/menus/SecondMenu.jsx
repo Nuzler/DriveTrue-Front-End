@@ -2,6 +2,7 @@ import React, { useEffect, useState  } from 'react'
 import Biriyani from '../../assets/biriyani.jpg'
 import { useCart } from '../Cart/CartContext'
 import Url from '../../assets/assets'
+import Icon from '../../assets/icon.png'
 
 const SecondMenu = () => {
   
@@ -12,7 +13,7 @@ const SecondMenu = () => {
     ]
     const[cartshow,SetCartshow]=useState();
     const[categoryopen,SetCategoryopen]=useState();
-
+    const [loading, setLoading] = useState(true);
     const [food, setFood] = useState([]); 
     const [item,setItem]=useState([]);
 
@@ -52,6 +53,9 @@ const SecondMenu = () => {
           <h1 key={category.id } onClick={()=>categoryClick(category.value)}>{category.name}</h1>
           </div>)}
       </div>
+       {loading?<div className="flex justify-center mx-[25%] md:mx-[50%] h-screen">
+              <div className="animate-spin   h-20 w-20 "><img src={Icon}/></div>
+            </div>:
       <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 '>
       {item.map((food)=><div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg  h-[400px]   ">
             <div key={food.foodId}  className='relative p-2.5 h-96 overflow-hidden rounded-xl bg-clip-border'>
@@ -70,7 +74,7 @@ const SecondMenu = () => {
             </button>
             </div>
             </div>)}
-      </div>
+      </div>}
     </div>
   )
 }
