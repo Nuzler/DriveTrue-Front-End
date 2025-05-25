@@ -56,7 +56,7 @@ const Navbar = ({ fn, nfn, nav }) => {
   return (
     <div className='flex flex-col gap-1'>
 
-=======
+
       <div className="w-full h-[70px] flex justify-between items-center px-7 md:px-7 bg-amber-400">
 
         {/* Logo Section */}
