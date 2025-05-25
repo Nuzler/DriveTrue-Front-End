@@ -65,9 +65,11 @@ const Cart = () => {
           const payment = {
             "sandbox": true,
             "merchant_id": "1230226",
+
             "return_url": `http://localhost:5173/order-status?states=success&uuid=${uuid}`,
             "cancel_url": "http://localhost:5173?status=cancel",
             "notify_url": "https://d272-175-157-123-49.ngrok-free.app/payhere-notify",
+
             "order_id":String(orderId),
             "items": "Food Order",
             "amount":String(amount.toFixed(2)),
@@ -90,9 +92,10 @@ const Cart = () => {
 
          
          
-          console.log("Sending Payment:", payment);
+
           setLoading(false);
        
+
         
           const form = document.createElement('form');
           form.method = 'POST';
@@ -160,9 +163,9 @@ const Cart = () => {
       </div>
 
          
+
       {cart.length>0 && (<Customer onSubmit={sendData} Load={loading} setLoad={setLoading}/>) }
-      
-      
+
     
     </div>
   );

@@ -35,6 +35,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
 
 
    const handleSubmit=(e)=>{
+    setLoad(false);
     e.preventDefault();
     setLoad(false);
     const SearchEnyFieldEmpty=Object.values(form).some(value=>value===null ||value==='');

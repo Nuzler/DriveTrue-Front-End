@@ -73,6 +73,7 @@ const Menu = () => {
       </div>:
       <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 lg:mx-11 lg:gap-3 xl:grid-cols-4 xl:gap-3 xl:mx-25    '> 
       {food.map((food)=><div className="relative  flex flex-col my-6 bg-white shadow-sm   rounded-4xl  h-[450px]  hover:bg-amber-500 hover:border-3 hover:border-amber-500 ">
+
             <div key={food.foodId}  className='relative p-2.5 h-60 overflow-hidden rounded-xl bg-clip-border'>
             <img   src={food.imageUrl}className='h-60 w-full object-cover rounded-3xl '/>
             </div>

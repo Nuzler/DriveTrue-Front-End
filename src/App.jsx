@@ -18,9 +18,11 @@ function App() {
   const heroclosebutton=()=>{
     setheroclose(2);
   }
+
   
 
   const [loading, setLoading] = useState(true);
+
 
 
 

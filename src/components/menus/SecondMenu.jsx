@@ -22,8 +22,10 @@ const SecondMenu = () => {
     fetch(`${Url}/getallfood`)
       .then(response => response.json())
       .then(data => {setItem(data)
+
                      setLoading(false)
       })
+
       .catch(error => console.error("Error fetching foods:", error));
   }, []);
 
@@ -49,13 +51,16 @@ const SecondMenu = () => {
    
 
   return (
+
     <div className='flex flex-col my-17'>
       <div className='bg-gradient-to-r from-red-900 to-orange-800 w-full min-h-[10px] flex justify-center gap-3 fixed top-17 z-10    '>
+
         {category.map((category)=>
            <div className='flex  text-md text-amber-50 font-mono font-bold cursor-pointer my-4 px-1 hover:text-xl ease-in-out duration-200'> 
           <h1 key={category.id } onClick={()=>categoryClick(category.value)}>{category.name}</h1>
           </div>)}
       </div>
+
       {loading?<div className="flex justify-center mx-[25%] md:mx-[50%] h-screen">
               <div className="animate-spin   h-20 w-20 "><img src={Icon}/></div>
             </div>:
@@ -63,6 +68,8 @@ const SecondMenu = () => {
       {item.map((food)=><div className="relative flex flex-col my-4 bg-white shadow-sm border border-slate-200 rounded-2xl  h-[400px]   ">
             <div key={food.foodId}  className='relative p- h-full  overflow-hidden rounded-xl bg-clip-border'>
             <img   src={food.imageUrl} className='h-full w-full object-cover object-cover rounded-md r'/>
+
+   
             </div>
             <div className='p-3'>
             <div className='mb-2 flex items-center justify-center '>
