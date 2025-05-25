@@ -12,6 +12,7 @@ const Cart = () => {
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const[hash,setHash]=useState();
   const[pickuptime,setPickuptime]=useState('Now');
+  const [loading, setLoading] = useState(true);
 
 
    const sendData=async (customerData)=>{
@@ -57,7 +58,7 @@ const Cart = () => {
           console.error("Error placing order:", error);
           alert("Failed to place order.");
         }
-
+ 
          }
 
          const redirectToPayHere = (orderId, customer, amount,hash,uuid) => {
@@ -66,7 +67,7 @@ const Cart = () => {
             "merchant_id": "1230226",
             "return_url": `http://localhost:5173/order-status?states=success&uuid=${uuid}`,
             "cancel_url": "http://localhost:5173?status=cancel",
-            "notify_url": "https://drivetrue-production.up.railway.app/payhere-notify",
+            "notify_url": "https://d272-175-157-123-49.ngrok-free.app/payhere-notify",
             "order_id":String(orderId),
             "items": "Food Order",
             "amount":String(amount.toFixed(2)),
@@ -86,14 +87,17 @@ const Cart = () => {
             "custom_2": ""
             
           };
+
+         
          
           console.log("Sending Payment:", payment);
-      
+          setLoading(false);
+       
         
           const form = document.createElement('form');
           form.method = 'POST';
           form.action = 'https://sandbox.payhere.lk/pay/checkout';
-      
+          
           for (const key in payment) {
             const input = document.createElement('input');
             input.type = 'hidden';
@@ -156,7 +160,7 @@ const Cart = () => {
       </div>
 
          
-      {cart.length>0 && (<Customer onSubmit={sendData}/>) }
+      {cart.length>0 && (<Customer onSubmit={sendData} Load={loading} setLoad={setLoading}/>) }
       
       
     

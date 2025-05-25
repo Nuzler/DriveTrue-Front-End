@@ -58,7 +58,7 @@ const Navbar = ({ fn, nfn, nav }) => {
         <div className='flex gap-3 items-center'>
           <img src={logo} alt='Logo' className={nav ? 'mx-[-130px] h-10 ease-in-out duration-1000' : 'h-10 rounded-full border-2'} />
           <div className='flex flex-col items-start'>
-            <h1 className="text-2xl font-Berkshire-Swash tracking-wide">The Traveler’s Cafe</h1>
+            <h1 className="text-md sm:2xl font-Berkshire-Swash tracking-wide">The Traveler’s Cafe</h1>
             <p className='text-sm px-1'>Drive True</p>
           </div>
         </div>
@@ -110,7 +110,7 @@ const Navbar = ({ fn, nfn, nav }) => {
             <img src={logo} alt='Logo' className='h-20 rounded-full border-2' />
           </div>
           <div className='flex flex-col items-center my-5'>
-            <h1 className="text-3xl font-Berkshire-Swash text-gray-900">The Traveler’s Cafe</h1>
+            <h1 className="text-2xl sm:text-3xl font-Berkshire-Swash text-gray-900">The Traveler’s Cafe</h1>
             <p>Drive True</p>
           </div>
           <div className='flex justify-center'>

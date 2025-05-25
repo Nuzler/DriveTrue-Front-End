@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Alfa+Slab+One&family=Amatic+SC:wght@400;700&family=Anton&family=Audiowide&family=Bangers&family=Berkshire+Swash&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Black+Ops+One&family=Boldonse&family=Bytesized&family=Caveat:wght@400..700&family=Codystar:wght@300;400&family=Geologica:wght@100..900&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Kaushan+Script&family=Libre+Barcode+39&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Macondo&family=Monoton&family=Oleo+Script:wght@400;700&family=Orbitron:wght@400..900&family=Pacifico&family=Passion+One:wght@400;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Guerrilla&family=Righteous&family=Rock+Salt&family=Sacramento&family=Special+Elite&family=Staatliches&family=Varela+Round&family=Yellowtail&family=Zeyada&display=swap');
 @import "tailwindcss";
 
 
 @theme{
     --font-Berkshire-Swash: "Berkshire Swash", serif;
     --font-Playfair-Display:"Playfair Display", serif;
+    --font-Anton:"Anton", serif;
+    --font-Passion-One:"PassionOne", sans-serif;
+    --font-Josefin-Sans:"JosefinSans", sans-serif;
+    --font-Boldonse:"Boldonse", system-ui;
+    --font-Bangers:"Bangers",sans-serif;
+    --font-Audiowide:"Audiowide",sans-serif;
+    --font-Orbitron  :"Orbitron",sans-serif;
+    --font-protest-guerrilla  :"protest-guerrilla",sans-serif;
+    --font-Oleo-Script:"OleoScript",sans-serif;
 }
