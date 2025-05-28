@@ -56,13 +56,6 @@ const Menu = () => {
    
   };
 
-  
-
-
- 
-   
-   
-
   return (
     <div className='flex flex-col bg-amber-400    '>
       <h1 className='text-center text-8xl xl:text-9xl   font-Berkshire-Swash  my-3 text-gray-900 '>Popular Food</h1>

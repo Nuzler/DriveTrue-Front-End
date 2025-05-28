@@ -31,10 +31,26 @@ const SecondMenu = () => {
 
   
 
-  const { addToCart } = useCart();
+  const { addToCart,cart } = useCart();
+  const [addedItems, setAddedItems] = useState({});
 
   const handleAdd = (foodItem) => {
     addToCart(foodItem);
+    const existingItem = cart.find(item => item.foodId === foodItem.foodId);
+    const newQty = existingItem ? existingItem.quantity + 1 : 1;
+     
+    //Temperly Show Cart Item Quantity
+     setAddedItems(prev => ({ ...prev, [foodItem.foodId]: newQty }));
+  
+    // Hide after 2 seconds
+    setTimeout(() => {
+      setAddedItems(prev => {
+        const updated = { ...prev };
+        delete updated[foodItem.foodId];
+        return updated;
+      });
+    }, 2000);
+    
     SetCartshow(1);
   };
 
@@ -81,7 +97,7 @@ const SecondMenu = () => {
             </p>
             <h1 className='text-amber-400 text-xl pt-2 font-semibold'>Rs.{food.price}</h1>
             <button onClick={() => handleAdd(food)}   className="rounded-md w-full mt-6 bg-amber-400 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-             Add to Cart
+             {addedItems[food.foodId] ? `Added x${addedItems[food.foodId]}` : 'Add to Cart'}
             </button>
             </div>
             </div>)}

@@ -8,6 +8,8 @@ import SecondMenu from './components/menus/SecondMenu';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './components/Cart/CartContext';
 import OrderStatus from './components/OrderStatus/OrderStatus';
+import Termsandcondition from './components/Terms&Condition/termsandcondition';
+import AboutUs from './components/AboutUs/aboutUs';
 
 function App() {
   const [heroclose, setheroclose] = useState(1);
@@ -42,6 +44,8 @@ function App() {
                 <Route path="/secondmenu" element={<SecondMenu />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/order-status" element={<OrderStatus />} />
+                <Route path="/terms&condition" element={<Termsandcondition/>}/>
+                <Route path='/aboutUs' element={<AboutUs fn={setheroclose}></AboutUs>}/>
               </Routes>
             </div>
           </div>

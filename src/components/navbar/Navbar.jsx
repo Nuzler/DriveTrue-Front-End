@@ -22,21 +22,36 @@ const Navbar = ({ fn, nfn, nav }) => {
   // Navigation handlers
   const goToHome = () => {
     navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     setButtonChange(true);
     fn(1);
   };
 
   const goToMenu = () => {
     navigate('/secondmenu');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     setButtonChange(true);
     fn(2);
   };
 
   const goToCart = () => {
     navigate('/cart');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     setButtonChange(false);
     fn(2);
   };
+
+   const goToterms = () => {
+    navigate('/terms&condition');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    fn(2);
+  };
+
+   const goToAbout=()=>{
+     navigate('/aboutUs');
+     window.scrollTo({ top: 0, behavior: 'smooth' })
+     fn(2);
+   }
 
   const goToHomeAndCloseNav = () => {
     goToHome();
@@ -53,11 +68,20 @@ const Navbar = ({ fn, nfn, nav }) => {
     nfn();
   };
 
+    const goToAboutAndCloseNav=()=>{
+    goToAbout();
+     nfn();
+   }
+     const goTotermsAndCloseNav=()=>{
+    goToterms();
+     nfn();
+   }
+
   return (
     <div className='flex flex-col gap-1'>
 
 
-      <div className="w-full h-[70px] flex justify-between items-center px-7 md:px-7 bg-amber-400">
+      <div className="w-full h-[70px] flex justify-center items-center px-7 md:px-7 bg-amber-400">
 
         {/* Logo Section */}
         <div className='flex gap-3 items-center'>
@@ -72,10 +96,11 @@ const Navbar = ({ fn, nfn, nav }) => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-15 text-[14px] pr-50 font-medium text-gray-800">
+        <ul className="hidden md:flex gap-15 text-[14px] mx-auto font-medium text-gray-800">
           <li onClick={goToHome} className="hover:underline cursor-pointer">Home</li>
           <li onClick={goToMenu} className="hover:underline cursor-pointer">Menu</li>
-          <li className="hover:underline cursor-pointer">About</li>
+          <li onClick={goToAbout} className="hover:underline cursor-pointer">About</li>
+          <li className='hover:underline cursor-pointer' onClick={goToterms}>Terms And Condition</li>
         </ul>
 
         {/* Mobile Buttons */}
@@ -128,7 +153,8 @@ const Navbar = ({ fn, nfn, nav }) => {
             <ul className='flex flex-col gap-6 pt-6 text-xl font-Playfair-Display'>
               <li onClick={goToHomeAndCloseNav} className='text-gray-800 font-medium hover:text-amber-600 cursor-pointer border-b'>Home</li>
               <li onClick={goToMenuAndCloseNav} className='text-gray-800 font-medium hover:text-amber-600 cursor-pointer border-b'>Menu</li>
-              <li className='text-gray-800 font-medium hover:text-amber-600 cursor-pointer border-b'>About</li>
+              <li onClick={goToAboutAndCloseNav} className='text-gray-800 font-medium hover:text-amber-600 cursor-pointer border-b'>About</li>
+              <li onClick={goTotermsAndCloseNav} className='text-gray-800 font-medium hover:text-amber-600 cursor-pointer border-b'>Terms</li>
             </ul>
           </div>
           <div className='flex flex-col items-center my-10 text-md font-bold font-Berkshire-Swash'>
