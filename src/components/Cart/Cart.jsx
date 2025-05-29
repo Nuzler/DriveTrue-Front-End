@@ -66,8 +66,8 @@ const Cart = () => {
             "sandbox": true,
             "merchant_id": "1230226",
 
-            "return_url": `http://localhost:5173/order-status?states=success&uuid=${uuid}`,
-            "cancel_url": "http://localhost:5173?status=cancel",
+            "return_url": `https://travelerscafe.lk/order-status?states=success&uuid=${uuid}`,
+            "cancel_url": "https://travelerscafe.lk?status=cancel",
             "notify_url": "https://drivetrue-348635399292.europe-west1.run.app/payhere-notify",
 
             "order_id":String(orderId),
