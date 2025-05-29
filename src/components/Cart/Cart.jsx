@@ -95,8 +95,7 @@ const Cart = () => {
 
           setLoading(false);
        
-          console.log(payment);
-          debugger;
+          
         
           const form = document.createElement('form');
           form.method = 'POST';
