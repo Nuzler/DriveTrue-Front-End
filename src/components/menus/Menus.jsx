@@ -51,8 +51,8 @@ const Menu = () => {
       });
     }, 2000);
     
-
-    SetCartshow(1);
+  SetCartshow(1);
+    
    
   };
 

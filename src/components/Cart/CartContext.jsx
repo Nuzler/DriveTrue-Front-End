@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+import Url from '../../assets/assets'
 
 
 //  Create a new context
@@ -10,7 +11,20 @@ export const CartProvider = ({ children }) => {
   const[cartnumber,setCartnumber]=useState(0);
 
   //  Add item to cart (same logic we built before)
-  const addToCart = (foodItem) => {
+  const addToCart = async (foodItem) => {
+
+    try{
+
+      const response= await fetch(`${Url}/getfood/${foodItem.foodId}`)
+      if(!response.ok){
+          throw new Error("Failed to fetch item from backend");
+      }
+      const backendFood = await response.json();
+
+      if(backendFood.price!==foodItem.price){
+        throw new Error("Price Is Incorect, Refresh The Page To See New Price ")
+      }
+    
     setCart(prevCart => {
       const existingItem = prevCart.find(item => item.foodId === foodItem.foodId);
       if (existingItem) {
@@ -25,8 +39,11 @@ export const CartProvider = ({ children }) => {
         return [...prevCart, { ...foodItem, quantity: 1 }];
       } 
     });
-    setCartnumber(cartnumber+1);
-    
+    setCartnumber(prev => prev + 1);
+    }catch(error){
+      console.error("Error ading To Cart",error);
+      alert("Something went wrong while verifying the item.");
+    }
   };
 
   const deleteToCart = (food) => {

@@ -58,7 +58,7 @@ const OrderStatus = () => {
             {data?.cartItems.map(item=>(
                   <div key={item.foodId} className='flex items-start justify-between border-b py-4'>
                     <div className='flex gap-4'>
-                      <img src={Biriyani} alt={item.foodName} className='w-28 h-28 object-cover rounded-lg' />
+                      <img src={item.imageUrl} alt={item.foodName} className='w-28 h-28 object-cover rounded-lg' />
                       <div className='flex flex-col justify-between'>
                         <h2 className='text-lg font-semibold text-gray-800'>{item.foodName}</h2>
                         <p className='text-sm text-gray-500'>Each: Rs.{item.price.toFixed(2)}</p>

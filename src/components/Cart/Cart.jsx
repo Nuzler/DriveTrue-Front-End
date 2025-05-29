@@ -25,7 +25,7 @@ const Cart = () => {
           foodName:item.foodName,
           quantity:item.quantity,    
           price:item.price,
-          
+          imageUrl:item.imageUrl    
           
         })),
       
@@ -68,7 +68,7 @@ const Cart = () => {
 
             "return_url": `http://localhost:5173/order-status?states=success&uuid=${uuid}`,
             "cancel_url": "http://localhost:5173?status=cancel",
-            "notify_url": "https://d272-175-157-123-49.ngrok-free.app/payhere-notify",
+            "notify_url": "https://drivetrue-348635399292.europe-west1.run.app/payhere-notify",
 
             "order_id":String(orderId),
             "items": "Food Order",

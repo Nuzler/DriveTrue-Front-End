@@ -89,8 +89,6 @@ const Navbar = ({ fn, nfn, nav }) => {
           <div className='flex flex-col items-start'>
 
             <h1 className="text-md sm:2xl font-Berkshire-Swash tracking-wide">The Traveler’s Cafe</h1>
-
-
             <p className='text-sm px-1'>Drive True</p>
           </div>
         </div>
@@ -111,7 +109,7 @@ const Navbar = ({ fn, nfn, nav }) => {
           {buttonChange ? (
             <div className="relative">
               <span className="absolute top-[-8px] right-[-10px] text-xs bg-black text-white rounded-full px-2">{cartnumber}</span>
-              <MdOutlineShoppingBag className="hover:text-gray-500 w-7 h-7 cursor-pointer" onClick={goToCart} />
+              <MdOutlineShoppingBag className="hover:text-gray-500 w-7 h-7 cursor-pointer" onClick={goToCart}/>  
             </div>
           ) : (
             <RiHome4Line className="hover:text-gray-500 w-7 h-7 cursor-pointer" onClick={goToHome} />
