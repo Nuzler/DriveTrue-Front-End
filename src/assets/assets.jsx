@@ -1,3 +1,3 @@
-const Url = "https://drivetrue-348635399292.europe-west1.run.app";
+const Url = "https://driving-christel-nuzler-cdcb76f5.koyeb.app";
 
 export default Url;
