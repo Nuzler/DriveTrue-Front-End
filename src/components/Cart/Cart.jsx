@@ -68,7 +68,7 @@ const Cart = () => {
 
             "return_url": `https://travelerscafe.lk/order-status?states=success&uuid=${uuid}`,
             "cancel_url": "https://travelerscafe.lk?status=cancel",
-            "notify_url": "https://drivetrue-348635399292.europe-west1.run.app/payhere-notify",
+            "notify_url": "https://driving-christel-nuzler-cdcb76f5.koyeb.app/payhere-notify",
 
             "order_id":String(orderId),
             "items": "Food Order",
