@@ -63,8 +63,8 @@ const Cart = () => {
 
          const redirectToPayHere = (orderId, customer, amount,hash,uuid) => {
           const payment = {
-            "sandbox": true,
-            "merchant_id": "1230226",
+            "sandbox": false,
+            "merchant_id": "244546",
 
             "return_url": `https://travelerscafe.lk/order-status?states=success&uuid=${uuid}`,
             "cancel_url": "https://travelerscafe.lk?status=cancel",
@@ -99,7 +99,7 @@ const Cart = () => {
         
           const form = document.createElement('form');
           form.method = 'POST';
-          form.action = 'https://sandbox.payhere.lk/pay/checkout';
+          form.action = 'https://payhere.lk/pay/checkout';
           
           for (const key in payment) {
             const input = document.createElement('input');
