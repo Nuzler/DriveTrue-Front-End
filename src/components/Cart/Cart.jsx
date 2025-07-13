@@ -63,7 +63,7 @@ const Cart = () => {
 
          const redirectToPayHere = (orderId, customer, amount,hash,uuid) => {
           const payment = {
-            "sandbox": false,
+            
             "merchant_id": "244546",
 
             "return_url": `https://travelerscafe.lk/order-status?states=success&uuid=${uuid}`,
