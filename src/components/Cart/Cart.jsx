@@ -99,7 +99,7 @@ const Cart = () => {
         
           const form = document.createElement('form');
           form.method = 'POST';
-          form.action = 'https://payhere.lk/pay/checkout';
+          form.action = 'https://www.payhere.lk/pay/checkout';
           
           for (const key in payment) {
             const input = document.createElement('input');
