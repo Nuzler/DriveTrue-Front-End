@@ -59,6 +59,9 @@ const Customer = ({onSubmit,Load,setLoad}) => {
 
    const handleChange=(e)=>{
         const{name,value}=e.target;
+      if (name === "pickupTime") {
+        const selected = new Date(value);
+        const hour = selected.getHours();}
         setForm(prev=>({...prev,[name]:value}));   
   }
 
