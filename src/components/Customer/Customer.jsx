@@ -11,7 +11,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
     number:"",
     email:"",
     pickupTime:"",
-    orderTime: ""
+    
    });
 
    const [pickupOption,setPickupOption]=useState("now")
@@ -64,17 +64,8 @@ const Customer = ({onSubmit,Load,setLoad}) => {
         return;
     }
   }
-    const now = new Date();
-  const offset = now.getTimezoneOffset();
-  now.setMinutes(now.getMinutes() - offset);
-
-  const formattedOrderTime = now.toISOString().slice(0, 16); // YYYY-MM-DDTHH:MM
-
-  const finalForm = {
-    ...form,
-    orderTime: formattedOrderTime
-  };
-     onSubmit(finalForm);}
+   
+     onSubmit(form);}
    }
 
    const getMinDateTime = () => {
