@@ -47,6 +47,16 @@ const Customer = ({onSubmit,Load,setLoad}) => {
      onSubmit(form);}
    }
 
+   const getMinDateTime = () => {
+        const now = new Date();
+
+        // Add 1 minute padding to avoid browser validation edge case
+        now.setMinutes(now.getMinutes() + 1);
+
+       // Format to YYYY-MM-DDTHH:mm
+       return now.toISOString().slice(0, 16);
+    };
+
    const handleChange=(e)=>{
         const{name,value}=e.target;
         setForm(prev=>({...prev,[name]:value}));   
@@ -121,6 +131,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
           onChange={handleChange}
           className="border p-2 w-full"
           required
+           min={getMinDateTime()}
         />
       )}
       
