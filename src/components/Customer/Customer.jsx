@@ -29,7 +29,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
         return;
     }else{
      
-     now.setMinutes(now.getMinutes() + 45);
+     
 
      const offset = now.getTimezoneOffset();
      now.setMinutes(now.getMinutes() - offset);
