@@ -24,7 +24,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
 
   const hour = now.getHours();
         if (hour < 8 || hour >= 22) {
-        alert("Please select a time between 12:00 PM and 10:00 PM.");
+        alert("You can Order 12:00 PM and 10:00 PM Only.");
         return;
     }else{
      
