@@ -54,6 +54,15 @@ const Customer = ({onSubmit,Load,setLoad}) => {
       return;
     }
     else{
+       if (name === "pickupTime") {
+        const selected = new Date(value);
+        const hour = selected.getHours();
+
+        if (hour < 9 || hour >= 22) {
+        alert("Please select a time between 12:00 PM and 10:00 PM.");
+        return;
+    }
+  }
      onSubmit(form);}
    }
 
@@ -69,9 +78,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
 
    const handleChange=(e)=>{
         const{name,value}=e.target;
-      if (name === "pickupTime") {
-        const selected = new Date(value);
-        const hour = selected.getHours();}
+    
         setForm(prev=>({...prev,[name]:value}));   
   }
 
