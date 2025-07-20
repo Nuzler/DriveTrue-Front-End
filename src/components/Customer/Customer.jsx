@@ -22,10 +22,20 @@ const Customer = ({onSubmit,Load,setLoad}) => {
      const now = new Date;
      now.setMinutes(now.getMinutes() + 45);
 
+  const hour = now.getHours();
+        if (hour < 8 || hour >= 22) {
+        alert("Please select a time between 12:00 PM and 10:00 PM.");
+        return;
+    }else{
+     
+     now.setMinutes(now.getMinutes() + 45);
+
      const offset = now.getTimezoneOffset();
      now.setMinutes(now.getMinutes() - offset);
+     
+      
 
-     setForm(prev=>({...prev,pickupTime: now.toISOString().slice(0, 16) }))
+     setForm(prev=>({...prev,pickupTime: now.toISOString().slice(0, 16) }))}
     }else{
       setForm(prev=>({...prev,pickupTime: '' }))
     }
