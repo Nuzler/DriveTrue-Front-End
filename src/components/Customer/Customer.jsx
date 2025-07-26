@@ -54,7 +54,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
       alert('Fill The Empty Field');
       return;
     }
-    else{
+    if{
        if (name === "pickupTime") {
         const selected = new Date(value);
         const hour = selected.getHours();
