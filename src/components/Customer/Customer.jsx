@@ -66,6 +66,16 @@ const Customer = ({onSubmit,Load,setLoad}) => {
   
        }
 
+       if(pickupOption==="now"){
+       const now = new Date;
+     
+
+        const hour = now.getHours();
+        if (hour < 8 || hour >= 22) {
+        alert("You can Choose Order Now Option  08:00 PM and 10:00 PM Only.");
+        return;
+    }}
+
       setLoad(false);
      onSubmit(form);
    }
