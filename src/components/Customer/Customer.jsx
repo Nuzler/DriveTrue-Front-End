@@ -56,7 +56,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
     }
     
        if (pickupOption==="later") {
-        const selected = new Date(value);
+        const selected = new Date(form.pickupTime);
         const hour = selected.getHours();
 
         if (hour < 9 || hour >= 22) {
