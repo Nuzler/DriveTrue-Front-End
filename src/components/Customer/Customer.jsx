@@ -63,7 +63,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
         alert("Please select a time between 09:00 PM and 10:00 PM.");
         return;
     }
-  }
+  
    
      onSubmit(form);}
    }
