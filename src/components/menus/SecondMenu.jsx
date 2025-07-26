@@ -70,7 +70,7 @@ const SecondMenu = () => {
   return (
 
     <div className='flex flex-col my-17'>
-      <div className='bg-gradient-to-r from-red-900 to-orange-800 w-full min-h-[10px] flex justify-center gap-3 fixed top-17 z-10    '>
+      <div className='bg-gradient-to-r from-red-900 to-orange-800 w-full min-h-[10px] flex justify-center gap-3 fixed top-17 z-10 ${activeCategory === categoryItem.value ? 'text-yellow-300 underline'}'>
 
         {category.map((category)=>
            <div className={`flex text-sm font-mono font-bold cursor-pointer my-4 px-1 hover:text-xl ease-in-out duration-200 `}> 
