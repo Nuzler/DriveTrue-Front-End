@@ -48,7 +48,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
    const handleSubmit=(e)=>{
    
     e.preventDefault();
-    setLoad(false);
+    
     const SearchEnyFieldEmpty=Object.values(form).some(value=>value===null ||value==='');
     if(SearchEnyFieldEmpty){
       alert('Fill The Empty Field');
@@ -65,6 +65,8 @@ const Customer = ({onSubmit,Load,setLoad}) => {
     }
   
        }
+
+      setLoad(false);
      onSubmit(form);
    }
 
