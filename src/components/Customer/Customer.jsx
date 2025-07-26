@@ -64,8 +64,8 @@ const Customer = ({onSubmit,Load,setLoad}) => {
         return;
     }
   
-   
-     onSubmit(form);}
+       }
+     onSubmit(form);
    }
 
    const getMinDateTime = () => {
