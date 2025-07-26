@@ -46,7 +46,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
 
 
    const handleSubmit=(e)=>{
-    setLoad(false);
+   
     e.preventDefault();
     setLoad(false);
     const SearchEnyFieldEmpty=Object.values(form).some(value=>value===null ||value==='');
@@ -54,7 +54,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
       alert('Fill The Empty Field');
       return;
     }
-    if{
+    
        if (name === "pickupTime") {
         const selected = new Date(value);
         const hour = selected.getHours();
