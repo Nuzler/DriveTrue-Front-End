@@ -55,7 +55,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
       return;
     }
     
-       if (name === "pickupTime") {
+       if (pickupOption==="later") {
         const selected = new Date(value);
         const hour = selected.getHours();
 
