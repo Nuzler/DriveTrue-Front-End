@@ -11,7 +11,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
     number:"",
     email:"",
     pickupTime:"",
-    
+    pickupOption:""
    });
 
    const [pickupOption,setPickupOption]=useState("now")
