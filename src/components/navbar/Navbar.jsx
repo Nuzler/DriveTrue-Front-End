@@ -84,7 +84,7 @@ const Navbar = ({ fn, nfn, nav }) => {
       <div className="w-full h-[70px] flex justify-center items-center px-7 md:px-7 bg-amber-400">
 
         {/* Logo Section */}
-        <div className='flex gap-3 items-center'>
+        <div onClick={goToHome} className='flex gap-3 items-center'>
           <img src={logo} alt='Logo' className={nav ? 'mx-[-130px] h-10 ease-in-out duration-1000' : 'h-10 rounded-full border-2'} />
           <div className='flex flex-col items-start'>
 
