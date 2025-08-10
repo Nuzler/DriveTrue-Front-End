@@ -84,7 +84,7 @@ const aboutUs = ({fn}) => {
           <ul className='pt-2'>
             <li className='flex items-center gap-2'><FaClock /> <h1> Mon - Sun : 7.00Am to 10.00Pm </h1></li>
             <li className='flex items-center gap-2'><IoCall/><a href="tel:0362251515" >0362251515</a></li>
-            <li className='flex items-center gap-2'><IoLogoWhatsapp /><a href="tel:0761001906" >0761001906</a> </li>
+            <li className='flex items-center gap-2'><IoLogoWhatsapp /><a href="tel:0761001906" >0702900393</a> </li>
             <li className='flex items-center gap-2'><FaLocationPin /><h1>HighLevel Road,Kosgama.</h1></li>
           </ul>
           </div>
