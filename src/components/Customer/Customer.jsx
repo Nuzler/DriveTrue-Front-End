@@ -15,12 +15,12 @@ const Customer = ({onSubmit,Load,setLoad}) => {
     
    });
 
-   const [pickupOption,setPickupOption]=useState("now")
+  
    
 
   useEffect(()=>{
 
-    if(pickupOption==="now"){
+    if(form.pickupOption==="now"){
      const now = new Date;
      now.setMinutes(now.getMinutes() + 45);
 
@@ -42,7 +42,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
       setForm(prev=>({...prev,pickupTime: '' }))
     }
 
-  },[pickupOption]);
+  },[form.pickupOption]);
 
 
 
@@ -56,7 +56,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
       return;
     }
     
-       if (pickupOption==="later") {
+       if (form.pickupOption==="later") {
         const selected = new Date(form.pickupTime);
         const hour = selected.getHours();
 
@@ -67,7 +67,7 @@ const Customer = ({onSubmit,Load,setLoad}) => {
   
        }
 
-       if(pickupOption==="now"){
+       if(form.pickupOption==="now"){
        const now = new Date;
      
 
@@ -145,20 +145,20 @@ const Customer = ({onSubmit,Load,setLoad}) => {
         <h1>Pickup Time</h1>
          
         <div class="flex items-center mb-4">
-            <input id="pickup-option-1" type="radio" name="pickup" value="now" checked={pickupOption === "now"} onChange={() => setPickupOption("now")} class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pickup-option-1" aria-describedby="pickup-option-1" />
+            <input id="pickup-option-1" type="radio" name="pickup" value="now" checked={form.pickupOption === "now"} onChange={() => setPickupOption("now")} class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pickup-option-1" aria-describedby="pickup-option-1" />
             <label for="pickup-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
             Now (in 45 minutes)
             </label>
         </div>
 
         <div class="flex items-center mb-4">
-            <input id="pickup-option-2" type="radio" name="pickup" value="later" checked={pickupOption === "later"} onChange={() => setPickupOption("later")} class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pickup-option-2" aria-describedby="pickup-option-2"/>
+            <input id="pickup-option-2" type="radio" name="pickup" value="later" checked={form.pickupOption === "later"} onChange={() => setPickupOption("later")} class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pickup-option-2" aria-describedby="pickup-option-2"/>
             <label for="pickup-option-2" class="text-sm font-medium text-gray-900 ml-2 block">
             Later
             </label>
         </div>
         
-        {pickupOption === "later" && (
+        {form.pickupOption === "later" && (
         <input
           type="datetime-local"
           name="pickupTime"
