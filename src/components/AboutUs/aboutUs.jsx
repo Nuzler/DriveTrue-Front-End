@@ -87,7 +87,16 @@ const aboutUs = ({fn}) => {
             <li className='flex items-center gap-2'><IoCall/><a href="tel:0362251515" >0362251515</a></li>
             <li className='flex items-center gap-2'><IoLogoWhatsapp /><a href="tel:0761001906" >0702900393</a> </li>
             <li className='flex items-center gap-2'><FaLocationPin /><h1>HighLevel Road,Kosgama.</h1></li>
-            <li className='flex items-center gap-2'><a href="https://www.facebook.com/TravelersCafeKosgama" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-600 transition-colors"><SiFacebook /><h1>Traveler's Cafe</h1></li>
+            <li className='flex items-center gap-2'>
+            <a
+            href="https://www.facebook.com/TravelersCafeKosgama"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-blue-600 transition-colors">
+        <SiFacebook />
+        <h1>Traveler's Cafe</h1>
+      </a>
+    </li>
           </ul>
           </div>
 
