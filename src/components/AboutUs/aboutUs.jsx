@@ -5,6 +5,7 @@ import { IoCall } from "react-icons/io5";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaClock } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
+import { SiFacebook } from "react-icons/si";
 import Visa from '../../assets/Visa.png'
 import { useNavigate } from 'react-router-dom';
 
@@ -86,6 +87,7 @@ const aboutUs = ({fn}) => {
             <li className='flex items-center gap-2'><IoCall/><a href="tel:0362251515" >0362251515</a></li>
             <li className='flex items-center gap-2'><IoLogoWhatsapp /><a href="tel:0761001906" >0702900393</a> </li>
             <li className='flex items-center gap-2'><FaLocationPin /><h1>HighLevel Road,Kosgama.</h1></li>
+            <li className='flex items-center gap-2'><SiFacebook /><h1>Traveler's Cafe</h1></li>
           </ul>
           </div>
 
